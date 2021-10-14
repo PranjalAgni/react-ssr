@@ -3,7 +3,7 @@ const React = require("react");
 const ReactDOMServer = require("react-dom/server");
 const path = require("path");
 const fs = require("fs");
-const { App } = require("../../src/app");
+import App from "../../../src/App";
 
 const getHtmlFileContents = () => {
   const htmlFilePath = path.join(__dirname, "../../", "public/index.html");
@@ -25,7 +25,7 @@ const getHtmlFileContents = () => {
   });
 };
 const router = Router();
-const app = ReactDOMServer.renderToString(React.createElement(App));
+const app = ReactDOMServer.renderToString(<App />);
 
 router.get("/", async (_req, res) => {
   const { error, data } = await getHtmlFileContents();
