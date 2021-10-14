@@ -3,6 +3,7 @@ const cors = require("cors");
 const compression = require("compression");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const appRouter = require("./routes/index");
 
 const initalizeApp = () => {
   const app = express();
@@ -11,7 +12,7 @@ const initalizeApp = () => {
   app.use(helmet());
   app.use(morgan("combined"));
   app.use(compression());
-
+  app.use("/api", appRouter);
   app.get("/", (_req, res) => {
     return res.status(200).json({
       status: "running"
