@@ -1,6 +1,6 @@
 const { Router } = require("express");
-const React = require("react");
-const ReactDOMServer = require("react-dom/server");
+import React from "react";
+import ReactDOMServer from "react-dom/server";
 const path = require("path");
 const fs = require("fs");
 import App from "../../../src/App";

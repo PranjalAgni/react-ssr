@@ -5,12 +5,12 @@ import Dashboard from './views/Dashboard';
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar />
       <div className="container">
         <Dashboard />
       </div>
-    </>
+    </div>
   );
 }
 
