@@ -1,5 +1,6 @@
 import 'bootswatch/dist/cyborg/bootstrap.min.css';
 import './App.css';
+import React from 'react';
 import { Navbar } from './components/Navbar';
 import Dashboard from './views/Dashboard';
 
